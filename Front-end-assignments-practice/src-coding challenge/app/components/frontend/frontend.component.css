@@ -1,0 +1,88 @@
+/* Centered Div */
+.centered-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Body Styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2; /* Light grey background */
+  color: #333; /* Dark text color */
+}
+
+/* Header Styling */
+h1 {
+  text-align: center;
+  color: #333; /* Dark header color */
+}
+
+/* Button Styling */
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+}
+
+.btn-success {
+  background-color: #007bff; /* Classic blue background for success button */
+}
+
+/* Form Styling */
+.container {
+  margin: 20px auto;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff; /* White background for form */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
+}
+
+form label {
+  margin-bottom: 5px;
+  color: #555; /* Dark grey label color */
+}
+
+form input[type="text"],
+form input[type="number"],
+form textarea {
+  width: calc(100% - 20px); /* Adjusting width to avoid overflow */
+  padding: 8px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+form button[type="submit"] {
+  background-color: #28a745; /* Green background for submit button */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+table th {
+  background-color: #f2f2f2; /* Light grey header background */
+  color: #333; /* Dark header text color */
+}

@@ -1,0 +1,31 @@
+/* Apply flexbox to center-align buttons horizontally */
+.text-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Allow buttons to wrap if they exceed the width */
+  gap: 10px; /* Add spacing between buttons */
+  margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+.text-center button {
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+.text-center button:hover {
+  background-color: skyblue;
+  color: white;
+}
+
+/* Apply background image to the body */
+body {
+  background-image: url('../../../assets/skyblue.jpg');
+  background-size: cover; /* This property ensures the image covers the entire background */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  /* Other styles if needed */
+}

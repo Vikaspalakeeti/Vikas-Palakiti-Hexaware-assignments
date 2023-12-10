@@ -1,0 +1,56 @@
+
+<p>student works!</p>
+
+
+<h1> welcome : {{sname}} </h1>
+
+<form>
+    Sid: <input type="text" name="sid" [value]=sid> <br>
+    Sname: <input type="text" name="sname" id="sname" [(ngModel)]=sname> <br>
+
+    
+    
+<button type="button" (click) = "getData()"> </button>  <br>
+    <!--we write this function in componenet class-->
+   <!--<img src="../../assets/snap.jpeg" height="200" width="200"> -->
+   <img [src]=imgurl height="200" width="200">
+
+
+<h1 *ngIf="5>3">this h1 </h1>
+
+
+
+
+
+
+
+
+
+
+</form>
+<table border="1">
+
+    <tr *ngFor ="let item of items"><td>{{item}}</td></tr>
+</table>
+
+<table border="1">
+
+    <tr *ngFor ="let student of studentList">
+        
+        <td>{{student.id}}</td>
+        
+        <td>{{student.sname}}</td>
+    </tr>
+</table>
+
+
+enter course : <input type="text" name="course" [(ngModel)]="course">
+<div [ngSwitch]="course">
+
+<div *ngSwitchCase="'Java'"><img src="../../assets/java.png"></div>
+<div *ngSwitchCase="'python'"><img src="../../assets/python.png"></div>
+<div *ngSwitchCase="'c'"><img src="../../assets/c.png"></div>
+
+
+</div>
+

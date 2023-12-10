@@ -1,0 +1,22 @@
+<h1>Hi welcome to webapp</h1>
+
+Salary : {{salary | currency:'INR'}}
+<br>
+Title: {{title | uppercase}}
+
+
+<br>
+
+<!--Date: {{mydate | date:'fulldate' | uppercase}}-->
+
+Slice: {{title | slice:1:3}}
+
+Square root: {{16|sqrt}}
+
+<br>
+
+<ul>
+  <li *ngFor="let product of productList">
+    Product ID: {{ product.pid }}, Name: {{ product.pname }}, Price: {{ product.price | currency:'INR' }}
+  </li>
+</ul>

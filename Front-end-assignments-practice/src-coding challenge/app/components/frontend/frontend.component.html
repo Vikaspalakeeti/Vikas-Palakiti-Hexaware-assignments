@@ -1,0 +1,68 @@
+<body>
+<h1 align="center"> Add Player</h1>
+<!-- <div class="centered-div"> -->
+
+  <button (click)="showForm()" class="btn btn-success ">Add Player</button>
+  <div *ngIf="isshowFormVisible" class="container  col-lg-4">
+  <form #playerForm="ngForm" (ngSubmit)="addPlayer(playerForm)">
+
+
+
+    <label for="playerID">Player ID:</label>
+<input type="text" id="playerID" name="playerID" [(ngModel)]="newPlayer.playerID" required><br>
+    
+
+    <label for="playerName">Player Name:</label>
+    <input type="text" id="playerName" name="playerName" [(ngModel)]="newPlayer.playerName" required><br>
+
+    <label for="jerseyNumber">Jersey Number:</label>
+    <input type="number" id="jerseyNumber" name="jerseyNumber" [(ngModel)]="newPlayer.jerseyNumber" required><br>
+
+    <label for="role">Role:</label>
+    <input type="text" id="role" name="role" [(ngModel)]="newPlayer.role" required><br>
+
+    <label for="totalMatches">Total Matches:</label>
+    <input type="number" id="totalMatches" name="totalMatches" [(ngModel)]="newPlayer.totalMatches" required><br>
+
+    <label for="teamName">Team Name:</label>
+    <input type="text" id="teamName" name="teamName" [(ngModel)]="newPlayer.teamName" required><br>
+
+    <label for="stateName">State Name:</label>
+    <input type="text" id="stateName" name="stateName" [(ngModel)]="newPlayer.stateName" required><br>
+
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" [(ngModel)]="newPlayer.description" required></textarea><br>
+
+    <button type="submit">Register Player</button>
+    <p *ngIf="isSuccess">Player added successfully!</p>
+  </form>
+</div>
+
+
+<button (click)="getJerseyId()" class="btn btn-success">Get Jersey Data Descending Order</button>
+
+<div *ngIf="isgetJerseyId" class="container col-lg-4">
+
+  <form>
+  <!-- Display the jersey numbers -->
+  <table>
+    <thead>
+      <tr>
+        <th>Jersey Numbers</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let number of jerseyNumbers">
+        <td>{{ number }}</td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+</div>
+
+<div>
+  <h1>{{5000 | currency:'INR'}} </h1>
+</div>
+
+
+</body>
